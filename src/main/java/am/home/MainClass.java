@@ -16,7 +16,6 @@ public class MainClass {
         start(testClass.getClass());
     }
 
-
     public static void start(Class<?> anyClass) {
         final int priority_height = 1;
         final int priority_low = 10;
@@ -34,12 +33,6 @@ public class MainClass {
                 map.put(test.priority(), m);
             }
         }
-
-        System.out.println(anyClass.getSimpleName() + ": ");
-        for (Integer key : map.keySet()) {
-            System.out.println("priority" + key + " " + map.get(key).getName());
-        }
-        System.out.println(anyClass.getSimpleName() + ": ");
 
         try {
             Object testClass = anyClass.newInstance();
